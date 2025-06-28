@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer components {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  #root {
+    @apply flex flex-col;
+  }
+  main {
+    @apply grow;
+  }
+  .login-register-wrapper {
+    @apply h-screen grid grid-cols-1 md:grid-cols-2;
+  }
+  .login-register-left-section {
+    @apply bg-[url(https://daryo.uz/static/2019/04/medium-5c9b931b92c88664f94c8ab4-750-500.jpg)] bg-cover bg-center;
+  }
+  .main-container {
+    @apply max-w-5xl mx-auto;
+  }
+}
