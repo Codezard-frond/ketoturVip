@@ -1,15 +1,18 @@
-import React from "react";
-
-function FormTextArea({ label }) {
+const FormTextArea = ({ label, name }) => {
   return (
-    <fieldset className="fieldset">
-      <legend className="fieldset-legend">{label}</legend>
+    <div className="flex flex-col gap-1 mb-4">
+      <label htmlFor={name} className="text-sm font-semibold">
+        {label}
+      </label>
       <textarea
-        className="textarea h-24 w-full"
-        placeholder="typr here"
-      ></textarea>
-    </fieldset>
+        id={name}
+        name={name}
+        rows="5"
+        className="border p-2 rounded"
+        required
+      />
+    </div>
   );
-}
+};
 
 export default FormTextArea;

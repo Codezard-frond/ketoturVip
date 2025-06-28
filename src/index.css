@@ -23,3 +23,11 @@
     @apply max-w-5xl mx-auto;
   }
 }
+
+.Hom-IMg {
+  border-radius: 35px 35px 0 0;
+}
+
+.home__border {
+  border-radius: 0 0 35px 35px;
+}
