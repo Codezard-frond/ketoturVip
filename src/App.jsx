@@ -1,4 +1,5 @@
-import React, { use, useEffect } from "react";
+// App.jsx
+import React, { useEffect } from "react";
 import {
   Navigate,
   RouterProvider,
@@ -15,6 +16,8 @@ import ProtectedRoutes from "./components/ProtectedRoutes";
 import { useGlobalContext } from "./hooks/useGlobalContext";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase/config";
+import Sayohat from "./pages/Sayohat";
+import SotibOlish from "./pages/SotibOlish";
 
 function App() {
   const { user, dispatch, isAuthReady } = useGlobalContext();
@@ -30,12 +33,20 @@ function App() {
       children: [
         { index: true, element: <Home /> },
         {
-          path: "travel/:name",
+          path: "travel/:id",
           element: <TravelDetail />,
         },
         {
-          path: "admin",
+          path: "/sayohat/:id",
+          element: <Sayohat />,
+        },
+        {
+          path: "/admin",
           element: <Admin />,
+        },
+        {
+          path: "/sotibolish",
+          element: <SotibOlish />,
         },
       ],
     },

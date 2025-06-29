@@ -21,7 +21,6 @@ export const useGoogleProvider = () => {
         photoURL: user?.photoURL,
         online: true,
       });
-      toast.success(`Welcome, ${displayName}!`);
       const userFef = doc(db, "users", user.uid);
       await updateDoc(userFef, {
         online: true,

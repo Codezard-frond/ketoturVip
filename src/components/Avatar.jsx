@@ -1,7 +1,6 @@
 import React, { use } from "react";
 
 function Avatar({ user }) {
-  console.log(user);
   return (
     <div className="">
       <div className="avatar flex items-center justify-center">

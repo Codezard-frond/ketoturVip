@@ -81,10 +81,16 @@ function Home() {
                     Narx: {item?.price} UZS
                   </h3>
                   <div className="flex justify-center sm:flex-row ml-0 sm:ml-3 items-start sm:items-center gap-[16px] sm:gap-[24px] mt-[30px]">
-                    <Link className="bg-[#002F2F] text-white px-[25px] py-[10px] rounded">
+                    <Link
+                      to={`/travel/${item.id}`}
+                      className="bg-[#002F2F] text-white px-[25px] py-[10px] rounded"
+                    >
                       Batafsil
                     </Link>
-                    <Link className="bg-[#002F2F] text-white px-[25px] py-[10px] rounded">
+                    <Link
+                      to={`/sayohat/${item.id}`}
+                      className="bg-[#002F2F] text-white px-[25px] py-[10px] rounded"
+                    >
                       Sotib olish
                     </Link>
                   </div>
@@ -118,16 +124,167 @@ function Home() {
                     Narx: {item?.price} UZS
                   </h3>
                   <div className="flex justify-center sm:flex-row ml-0 sm:ml-3 items-start sm:items-center gap-[16px] sm:gap-[24px] mt-[30px]">
-                    <Link className="bg-[#002F2F] text-white px-[25px] py-[10px] rounded">
+                    <Link
+                      to={`/travel/${item.id}`}
+                      className="bg-[#002F2F] text-white px-[25px] py-[10px] rounded"
+                    >
                       Batafsil
                     </Link>
-                    <Link className="bg-[#002F2F] text-white px-[25px] py-[10px] rounded">
+                    <Link
+                      to={`/sayohat/${item.id}`}
+                      className="bg-[#002F2F] text-white px-[25px] py-[10px] rounded"
+                    >
                       Sotib olish
                     </Link>
                   </div>
                 </div>
               </div>
             ))}
+        </div>
+      </div>
+      <div className="bg-[#002F2F] py-16 px-4">
+        <div className="max-w-[1200px] mx-auto flex flex-col gap-20">
+          <div className="flex flex-col lg:flex-row justify-between gap-12">
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+              <img
+                className="w-[90px] md:w-[110px] object-cover mb-6"
+                src="./images/mian1.png"
+                alt="mainLogo1"
+              />
+              <h3 className="text-white text-[32px] md:text-[44px] mb-6">
+                Tajribali qo‘llanma
+              </h3>
+              <p className="text-white text-[16px] md:text-[18px] max-w-[422px]">
+                Har bir mamlakatning va shaharning turli sayohat dasturlari
+                haqida ma'lumotlar olasiz. Sayohatga chiqqaningizda sizga
+                dastur, jamoa va xizmatlar haqida maslahatlar beramiz.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+              <img
+                className="w-[90px] md:w-[110px] object-cover mb-6"
+                src="./images/Plane-ticket (1).png"
+                alt="mainLogo2"
+              />
+              <h3 className="text-white text-[32px] md:text-[44px] mb-6">
+                Qulay narx
+              </h3>
+              <p className="text-white text-[16px] md:text-[18px] max-w-[422px]">
+                Maxsus chegirmalar, xizmatlar va arzon narxlar orqali sizga
+                sifatli sayohat imkoniyatlarini taqdim qilamiz.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-full max-w-[500px] mx-auto px-10 py-12 text-center">
+            <h3 className="text-[#002F2F] text-xl md:text-2xl mb-2">
+              Nima uchun?
+            </h3>
+            <h2 className="text-[#002F2F] text-[36px] md:text-[60px] font-bold">
+              Nima uchun bizni tanlaysiz?
+            </h2>
+          </div>
+
+          <div className="flex flex-col lg:flex-row justify-between gap-12">
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+              <img
+                className="w-[90px] md:w-[110px] object-cover mb-6"
+                src="./images/List-agenda (1).png"
+                alt="mainLogo3"
+              />
+              <h3 className="text-white text-[32px] md:text-[44px] mb-6">
+                Ajoyib qo‘llab-quvvatlash
+              </h3>
+              <p className="text-white text-[16px] md:text-[18px] max-w-[422px]">
+                Mijozlarga e-mail orqali yangiliklar, webinarlar va onlayn
+                taqdimotlar bilan ko‘mak beramiz.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+              <img
+                className="w-[90px] md:w-[110px] object-cover mb-6"
+                src="./images/Plane-ticket (1).png"
+                alt="mainLogo4"
+              />
+              <h3 className="text-white text-[32px] md:text-[44px] mb-6">
+                Hashamatli mehmonxona
+              </h3>
+              <p className="text-white text-[16px] md:text-[18px] max-w-[422px]">
+                Litsenziyalangan mehmonxonalar bilan hamkorlik. Mijozlarga
+                qulay, sifatli xizmat ko‘rsatish kafolatlanadi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#e9e5e5] py-16 px-4">
+        <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12">
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-3xl font-semibold mb-8 text-[#002F2F]">
+              Bog‘lanish
+            </h2>
+            <form className="flex flex-col gap-6">
+              <div className="flex flex-col md:flex-row gap-4">
+                <input
+                  type="text"
+                  placeholder="Ism"
+                  className="w-full border border-[#002F2F] text-[#002F2F] placeholder:text-[#002F2F  ] rounded-md px-4 py-2 outline-none"
+                />
+                <input
+                  type="text"
+                  placeholder="Familiya"
+                  className="w-full border border-[#002F2F] text-[#002F2F] placeholder:text-[#002F2F  ] rounded-md px-4 py-2 outline-none"
+                />
+              </div>
+              <div className="flex flex-col md:flex-row gap-4">
+                <input
+                  type="tel"
+                  placeholder="Telefon raqam: +998"
+                  className="w-full border border-[#002F2F] text-[#002F2F] placeholder:text-[#002F2F  ] px-4 py-2 outline-none"
+                />
+                <input
+                  type="email"
+                  placeholder="email@domain.com"
+                  className="w-full border border-[#002F2F] text-[#002F2F] placeholder:text-[#002F2F  ] rounded-md px-4 py-2 outline-none"
+                />
+              </div>
+              <textarea
+                rows="5"
+                placeholder="Xabar"
+                className="w-full border border-[#002F2F] text-[#002F2F] placeholder:text-[#002F2F] rounded-md px-4 py-2 outline-none"
+              />
+              <button
+                type="submit"
+                className="bg-[#002F2F] text-[#fff] py-3 rounded-md hover:bg-[#003333] transition-all"
+              >
+                Xabar yuborish
+              </button>
+            </form>
+          </div>
+
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-3xl font-semibold text-[#002F2F] mb-8">
+              Manzilimiz
+            </h2>
+            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="h-[300px] w-full bg-black flex items-center justify-center text-white text-xl">
+                MAP IMAGE / IFRAME
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-semibold mb-2">O‘zbekiston</h3>
+                <p className="text-sm text-gray-700 mb-2">
+                  Yakkasaroy tumani Bobur 46/72 Mo‘ljal: Yakkasaroy Xalqaro
+                  Aeroport yo‘li
+                </p>
+                <div className="flex items-center gap-1 text-orange-500 text-sm">
+                  ★★★★★ <span className="ml-2 text-black">5/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
